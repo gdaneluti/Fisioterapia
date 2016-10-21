@@ -6,7 +6,7 @@
 package view;
 
 import entity.Periodo;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.GroupLayout;
@@ -132,7 +132,7 @@ public class Paciente extends javax.swing.JFrame {
 //            }
 //        });
 
-        ServicoFaixada servicoFachada = new ServicoFaixada();
+        ServicoFachada servicoFachada = new ServicoFachada();
 		// servicoFachada.cadastrarFuncionario("WENDLER",
 		// Especialidade.ACUPUNTURA, "1234");
 		// servicoFachada.cadastrarFuncionario("GUILHERME",
@@ -151,7 +151,7 @@ public class Paciente extends javax.swing.JFrame {
 		//String[] arrayTeste = teste.split("Gustavo - ACUPUNTURA - 1234");
 		entity.Funcionario funcionario = servicoFachada.solicitarFuncionarioByCrf("");
 		for (Periodo itemPeriodo : servicoFachada.IniciarAgendamento(funcionario).getPeriodos()) {
-			//comboBoxHorariosDisponiveis.addItem(itemPeriodo.getInicio() + " h às " + itemPeriodo.getFim() + "h");
+			//comboBoxHorariosDisponiveis.addItem(itemPeriodo.getInicio() + " h ï¿½s " + itemPeriodo.getFim() + "h");
 		}
 //        jComboBoxAgendaHoraFuncionario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Laura Miller - Muscular", "Lucas Ribeiro - Pilates", "Carla Roberta - Fisioterapeuta Manual", "Riana Stuart - Acunpultura" }));
 //        jComboBoxAgendaHoraFuncionario.addActionListener(new java.awt.event.ActionListener() {
@@ -256,7 +256,7 @@ public class Paciente extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        jTabbedPanePaciente.addTab("Avaliação de Atendimento", jPanel15);
+        jTabbedPanePaciente.addTab("Avaliaï¿½ï¿½o de Atendimento", jPanel15);
 
         jButtonConfirmaAlteraFuncionario.setText("Alterar");
         jButtonConfirmaAlteraFuncionario.addActionListener(new java.awt.event.ActionListener() {

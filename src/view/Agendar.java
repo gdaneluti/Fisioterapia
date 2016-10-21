@@ -11,7 +11,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 import entity.Data;
 import entity.Periodo;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 
 /**
  *
@@ -58,7 +58,7 @@ public class Agendar extends javax.swing.JFrame {
 
 		jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		// String teste =
 		// jComboBoxAgendaEspecialidadeFuncionario.getSelectedItem().toString();
 		// String[] arrayTeste = teste.split(" - ");
@@ -66,7 +66,7 @@ public class Agendar extends javax.swing.JFrame {
 		
 		entity.Funcionario funcionario = servicoFachada.solicitarFuncionarioByCrf(arrayEspecialidadeEscolhida[2]);
 		for (Periodo itemPeriodo : servicoFachada.IniciarAgendamento(funcionario).getPeriodos()) {
-			jComboBox1.addItem(itemPeriodo.getInicio().getHora() + "h às " + itemPeriodo.getFim().getHora() + "h");
+			jComboBox1.addItem(itemPeriodo.getInicio().getHora() + "h ï¿½s " + itemPeriodo.getFim().getHora() + "h");
 		}
 
 		// jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[]
@@ -123,12 +123,12 @@ public class Agendar extends javax.swing.JFrame {
 	}
 
 	private void jButtonConfirmaAlteraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		String[] arrayEspecialidadeEscolhida = getEspecialidadeEscolhida().split(" - ");
 		
 		String stringPeriodo = jComboBox1.getSelectedItem().toString();
 		String periodo = stringPeriodo.replaceAll("h", " ");
-		periodo = periodo.replaceAll(" às ", "");
+		periodo = periodo.replaceAll(" ï¿½s ", "");
 		String[] arrayPeriodo = periodo.split(" ");
 
 		Data dt1 = Data.nova(Integer.parseInt(arrayPeriodo[0]), 0);

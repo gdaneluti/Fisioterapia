@@ -5,7 +5,7 @@
  */
 package view;
 
-import service.ServicoFaixada;
+import service.ServicoFachada;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JOptionPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -198,13 +198,13 @@ public class LoginPaciente extends javax.swing.JFrame {
 	}// GEN-LAST:event_jTextFieldLoginNomeFuncionarioActionPerformed
 
 	private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton1ActionPerformed
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		if (servicoFachada.cadastrarPaciente(jTextFieldLoginNomeFuncionario.getText(),
 				jTextFieldLoginCrfFuncionario1.getText())) {
 			JOptionPane.showMessageDialog(null, "Paciente Cadastrado com Sucesso!");
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "Este CPF já foi cadastrado!");
+			JOptionPane.showMessageDialog(null, "Este CPF jï¿½ foi cadastrado!");
 		}
 	}
 
@@ -219,7 +219,7 @@ public class LoginPaciente extends javax.swing.JFrame {
 	}// GEN-LAST:event_jTextFieldLoginCpfPacienteActionPerformed
 
 	private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton4ActionPerformed
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		servicoFachada.cadastrarPaciente("Gustavo", "1234");
 
 		if (servicoFachada.solicitarLoginPaciente(jTextFieldLoginCpfPaciente.getText()) != null) {

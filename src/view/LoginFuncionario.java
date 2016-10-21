@@ -8,7 +8,7 @@ package view;
 import javax.swing.JToggleButton;
 
 import enumerate.Especialidade;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -78,7 +78,7 @@ public class LoginFuncionario extends javax.swing.JFrame {
 		jLabelEspecialidadeFuncionario1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 		jLabelEspecialidadeFuncionario1.setText("Selecione sua Especialidade");
 
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		// servicoFachada.cadastrarFuncionario("WENDLER",
 		// Especialidade.ACUPUNTURA, "1234");
 		// servicoFachada.cadastrarFuncionario("GUILHERME",
@@ -249,14 +249,14 @@ public class LoginFuncionario extends javax.swing.JFrame {
 	}// GEN-LAST:event_jToggleButton3ActionPerformed
 
 	private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton1ActionPerformed
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		if (servicoFachada.cadastrarFuncionario(jTextFieldLoginNomeFuncionario.getText(),
 				jComboBoxLoginEspecialidadeFuncionario1.getSelectedItem().toString(),
 				jTextFieldLoginCrfFuncionario1.getText())) {
-			JOptionPane.showMessageDialog(null, "Funcionário Cadastrado com Sucesso!");
+			JOptionPane.showMessageDialog(null, "Funcionï¿½rio Cadastrado com Sucesso!");
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "Funcionário já cadastrado!");
+			JOptionPane.showMessageDialog(null, "Funcionï¿½rio jï¿½ cadastrado!");
 		}
 
 	}
