@@ -24,7 +24,7 @@ public class TesteDebug {
 	public static void main(String[] args) {
 		@SuppressWarnings("unused")
 		Fisioterapia fisioterapia = new Fisioterapia();
-		 fisioterapia.main(args);
+		fisioterapia.main(args);
 		
 		//testUpdateAgendaPaciente();
 
@@ -45,7 +45,7 @@ public class TesteDebug {
 	 * public static void BuscarHorariosLivres() { ServicoFaixada servicoFaixada
 	 * = new ServicoFaixada();
 	 * 
-	 * // Simula a criação de um paciente
+	 * // Simula a criaï¿½ï¿½o de um paciente
 	 * servicoFaixada.cadastrarPaciente("GABRIEL", "402.502.698-80"); // Simula
 	 * o cadastro de um funcionario
 	 * servicoFaixada.cadastrarFuncionario("GUSTAVO", "ACUPUNTURA", "1234");
@@ -55,22 +55,22 @@ public class TesteDebug {
 	 * 
 	 * // Como nenhum paciente foi agendado, este for deve retornar todos os //
 	 * horarios disponiveis System.out.println(
-	 * "Todos horários estão disponiveis, nenhum paciente agendado"); for
+	 * "Todos horï¿½rios estï¿½o disponiveis, nenhum paciente agendado"); for
 	 * (Periodo itemPeriodo : agenda.getPeriodos()) {
-	 * System.out.println(itemPeriodo.getInicio().getHora() + "h às " +
+	 * System.out.println(itemPeriodo.getInicio().getHora() + "h ï¿½s " +
 	 * itemPeriodo.getFim().getHora() + "h"); }
 	 * 
 	 * // Simula o agendamento de um paciente Data dt1 = Data.nova(8, 0); Data
 	 * dt2 = Data.nova(9, 0);
 	 * servicoFaixada.AgregarAgendaPaciente(servicoFaixada.Agendar(dt1, dt2),
 	 * PacienteRepositorio.getPacientes().get(0)); System.out.println(
-	 * "Após agendar um paciente das 8h às 9h esse periodo não está mais disponivel"
+	 * "Apï¿½s agendar um paciente das 8h ï¿½s 9h esse periodo nï¿½o estï¿½ mais disponivel"
 	 * ); Agenda agenda1 =
 	 * servicoFaixada.IniciarAgendamento(servicoFaixada.getFuncionarios().get(0)
 	 * );
 	 * 
 	 * for (Periodo itemPeriodo : agenda1.getPeriodos()) {
-	 * System.out.println(itemPeriodo.getInicio().getHora() + "h às " +
+	 * System.out.println(itemPeriodo.getInicio().getHora() + "h ï¿½s " +
 	 * itemPeriodo.getFim().getHora() + "h"); } System.out.println("\n"); }
 	 */
 	public static void testUpdateAgendaPaciente() {
@@ -79,7 +79,7 @@ public class TesteDebug {
 
 		servicoFachada.cadastrarPaciente("Paciente1", "Paciente1");
 		servicoFachada.cadastrarPaciente("Paciente2", "Paciente2");
-		servicoFachada.cadastrarFuncionario("Funcionário Teste", "ACUPUNTURA", "4567890");
+		servicoFachada.cadastrarFuncionario("FuncionÃ¡rio Teste", "ACUPUNTURA", "4567890");
 
 		Data inicio = Data.nova(8, 10);
 		Data fim = Data.nova(9, 10);
@@ -90,8 +90,9 @@ public class TesteDebug {
 
 		servicoFachada.solicitarDeleteAgendaPaciente(servicoFachada.getAgendaPaciente().get(0));
 		
+		//ComentÃ¡rio
 		
-		// Funcionario funcionario2 = Funcionario.novo("Funcionário Teste",
+		// Funcionario funcionario2 = Funcionario.novo("Funcionï¿½rio Teste",
 		// "ACUPUNTURA", "4567890");
 		// Paciente paciente2 = Paciente.novoPaciente("Paciente Teste", "567");
 		// Paciente paciente3 = Paciente.novoPaciente("Paciente Test2", "123");
