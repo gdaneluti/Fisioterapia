@@ -10,6 +10,16 @@ import service.ServicoFachada;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.GroupLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+
+import aggregate.AgendaPaciente;
+
+import java.awt.Font;
+import java.awt.Dimension;
+import javax.swing.JLabel;
 
 /**
  *
@@ -53,75 +63,64 @@ public class Paciente extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPanePaciente = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelTelaInicialPaciente = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
-        jTextFieldDataAgendarPaciente = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButtonAgendaConfirmaPaciente = new javax.swing.JButton();
-        jButtonAgendaCancelarPaciente = new javax.swing.JButton();
         jComboBoxAgendaEspecialidadeFuncionario = new javax.swing.JComboBox();
+        jComboBoxAgendaEspecialidadeFuncionario.setPreferredSize(new Dimension(29, 20));
         jLabelEspecialidadeFuncionario1 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jTextFieldCrfFuncionario4 = new javax.swing.JTextField();
-        jLabeCrfFuncionario3 = new javax.swing.JLabel();
-        jButtonConfirmaFuncionario1 = new javax.swing.JButton();
-        jButtonCancelarFuncionario1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jButtonConfirmaAlteraFuncionario = new javax.swing.JButton();
-        jButtonCancelarAlteraFuncionario = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
+        jComboBoxCancelaHoraPaciente = new javax.swing.JComboBox();
+        jComboBoxCancelaHoraPaciente.setPreferredSize(new Dimension(29, 20));
 
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Bem vindo ");
+        jLabelTelaInicialPaciente.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabelTelaInicialPaciente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTelaInicialPaciente.setText("Bem Vindo ");
+        
+        JButton btnLogoff = new JButton("Logoff");
+        btnLogoff.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+        		Fisioterapia telaFisioterapia = new Fisioterapia();
+        		telaFisioterapia.setVisible(true);
+        		telaFisioterapia.setLocationRelativeTo(null);
+        		dispose();
+        	}
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+        	jPanel2Layout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(jPanel2Layout.createSequentialGroup()
+        			.addContainerGap(38, Short.MAX_VALUE)
+        			.addComponent(jLabelTelaInicialPaciente, GroupLayout.PREFERRED_SIZE, 352, GroupLayout.PREFERRED_SIZE)
+        			.addGap(28))
+        		.addGroup(Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+        			.addGap(178)
+        			.addComponent(btnLogoff)
+        			.addContainerGap(177, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(208, Short.MAX_VALUE))
+        	jPanel2Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel2Layout.createSequentialGroup()
+        			.addGap(73)
+        			.addComponent(jLabelTelaInicialPaciente, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
+        			.addComponent(btnLogoff)
+        			.addGap(22))
         );
+        jPanel2.setLayout(jPanel2Layout);
 
         jTabbedPanePaciente.addTab("Tela Inicial", jPanel2);
-
-        jTextFieldDataAgendarPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDataAgendarPacienteActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Verificar Dia");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jButtonAgendaConfirmaPaciente.setText("Confirmar");
         jButtonAgendaConfirmaPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAgendaConfirmaPacienteActionPerformed(evt);
-            }
-        });
-
-        jButtonAgendaCancelarPaciente.setText("Cancelar");
-        jButtonAgendaCancelarPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAgendaCancelarPacienteActionPerformed(evt);
             }
         });
 
@@ -143,9 +142,9 @@ public class Paciente extends javax.swing.JFrame {
 		}
 		jComboBoxAgendaEspecialidadeFuncionario.setSelectedIndex(-1);
 		
-        jLabelEspecialidadeFuncionario1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabelEspecialidadeFuncionario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEspecialidadeFuncionario1.setText("Selecione sua Especialidade");
+        jLabelEspecialidadeFuncionario1.setFont(new Font("Tahoma", Font.BOLD, 12)); // NOI18N
+        jLabelEspecialidadeFuncionario1.setHorizontalAlignment(SwingConstants.LEFT);
+        jLabelEspecialidadeFuncionario1.setText("Selecione a Especialidade");
 
         //String teste = jComboBoxAgendaEspecialidadeFuncionario.getSelectedItem().toString();
 		//String[] arrayTeste = teste.split("Gustavo - ACUPUNTURA - 1234");
@@ -162,145 +161,84 @@ public class Paciente extends javax.swing.JFrame {
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11Layout.setHorizontalGroup(
-        	jPanel11Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel11Layout.createSequentialGroup()
-        			.addGroup(jPanel11Layout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(jPanel11Layout.createSequentialGroup()
-        					.addGap(29)
-        					.addGroup(jPanel11Layout.createParallelGroup(Alignment.LEADING, false)
-        						.addGroup(jPanel11Layout.createSequentialGroup()
-        							.addComponent(jButtonAgendaConfirmaPaciente)
-        							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        							.addComponent(jButtonAgendaCancelarPaciente))
-        						.addComponent(jComboBoxAgendaEspecialidadeFuncionario, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        						.addComponent(jLabelEspecialidadeFuncionario1, GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)))
-        				.addGroup(jPanel11Layout.createSequentialGroup()
-        					.addGap(103)
-        					.addGroup(jPanel11Layout.createParallelGroup(Alignment.LEADING, false)
-        						.addComponent(jTextFieldDataAgendarPaciente, GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-        						.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
-        			.addContainerGap(30, Short.MAX_VALUE))
-        );
-        jPanel11Layout.setVerticalGroup(
         	jPanel11Layout.createParallelGroup(Alignment.TRAILING)
         		.addGroup(jPanel11Layout.createSequentialGroup()
-        			.addGap(20)
+        			.addContainerGap(171, Short.MAX_VALUE)
+        			.addComponent(jButtonAgendaConfirmaPaciente)
+        			.addGap(168))
+        		.addGroup(Alignment.LEADING, jPanel11Layout.createSequentialGroup()
+        			.addGap(29)
+        			.addGroup(jPanel11Layout.createParallelGroup(Alignment.LEADING)
+        				.addComponent(jComboBoxAgendaEspecialidadeFuncionario, GroupLayout.PREFERRED_SIZE, 363, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jLabelEspecialidadeFuncionario1, GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
+        			.addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+        	jPanel11Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel11Layout.createSequentialGroup()
+        			.addGap(90)
         			.addComponent(jLabelEspecialidadeFuncionario1)
-        			.addPreferredGap(ComponentPlacement.RELATED)
-        			.addComponent(jComboBoxAgendaEspecialidadeFuncionario, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
-        			.addComponent(jTextFieldDataAgendarPaciente, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-        			.addGap(9)
-        			.addComponent(jButton1)
-        			.addPreferredGap(ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
-        			.addGroup(jPanel11Layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButtonAgendaCancelarPaciente)
-        				.addComponent(jButtonAgendaConfirmaPaciente))
+        			.addComponent(jComboBoxAgendaEspecialidadeFuncionario, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+        			.addComponent(jButtonAgendaConfirmaPaciente)
         			.addContainerGap())
         );
         jPanel11.setLayout(jPanel11Layout);
 
         jTabbedPanePaciente.addTab("Agendar", jPanel11);
 
-        jTextFieldCrfFuncionario4.setText("Nome Paciente");
-        jTextFieldCrfFuncionario4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCrfFuncionario4ActionPerformed(evt);
-            }
-        });
-
-        jLabeCrfFuncionario3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabeCrfFuncionario3.setText("Digite o nome do Paciente");
-
-        jButtonConfirmaFuncionario1.setText("Confirmar");
-        jButtonConfirmaFuncionario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConfirmaFuncionario1ActionPerformed(evt);
-            }
-        });
-
-        jButtonCancelarFuncionario1.setText("Cancelar");
-        jButtonCancelarFuncionario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCancelarFuncionario1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(jButtonConfirmaFuncionario1)
-                        .addGap(112, 112, 112)
-                        .addComponent(jButtonCancelarFuncionario1))
-                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabeCrfFuncionario3)
-                        .addComponent(jTextFieldCrfFuncionario4, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(jLabeCrfFuncionario3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldCrfFuncionario4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonConfirmaFuncionario1)
-                    .addComponent(jButtonCancelarFuncionario1))
-                .addGap(20, 20, 20))
-        );
-
-        jTabbedPanePaciente.addTab("Avalia��o de Atendimento", jPanel15);
-
         jButtonConfirmaAlteraFuncionario.setText("Alterar");
         jButtonConfirmaAlteraFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonConfirmaAlteraFuncionarioActionPerformed(evt);
             }
-        });
+        });	
 
-        jButtonCancelarAlteraFuncionario.setText("Cancelar");
-        jButtonCancelarAlteraFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCancelarAlteraFuncionarioActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+         /*jComboBoxCancelaHoraPaciente.
+        	for(AgendaPaciente agendaPaciente : servicoFachada.getAgendaPaciente()){
+        		if(agendaPaciente.getPaciente().getCpf().equals(servicoFachada.solicitarLoginPaciente(jTextFieldLoginCpfPaciente.getText())) ){
+        			
+        		}
+        	}*/
+        	
+        
+        //setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        
+        JLabel lblSelecioneOAgendamento = new JLabel();
+        lblSelecioneOAgendamento.setText("Selecione o Agendamento");
+        lblSelecioneOAgendamento.setHorizontalAlignment(SwingConstants.LEFT);
+        lblSelecioneOAgendamento.setFont(new Font("Tahoma", Font.BOLD, 12));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jButtonConfirmaAlteraFuncionario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
-                        .addComponent(jButtonCancelarAlteraFuncionario)))
-                .addGap(30, 30, 30))
+        	jPanel6Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel6Layout.createSequentialGroup()
+        			.addGroup(jPanel6Layout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(jPanel6Layout.createSequentialGroup()
+        					.addGap(172)
+        					.addComponent(jButtonConfirmaAlteraFuncionario))
+        				.addGroup(jPanel6Layout.createSequentialGroup()
+        					.addGap(23)
+        					.addGroup(jPanel6Layout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(jComboBoxCancelaHoraPaciente, GroupLayout.PREFERRED_SIZE, 366, GroupLayout.PREFERRED_SIZE)
+        						.addComponent(lblSelecioneOAgendamento, GroupLayout.PREFERRED_SIZE, 379, GroupLayout.PREFERRED_SIZE))))
+        			.addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonConfirmaAlteraFuncionario)
-                    .addComponent(jButtonCancelarAlteraFuncionario))
-                .addGap(20, 20, 20))
+        	jPanel6Layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(jPanel6Layout.createSequentialGroup()
+        			.addGap(83)
+        			.addComponent(lblSelecioneOAgendamento, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.UNRELATED)
+        			.addComponent(jComboBoxCancelaHoraPaciente, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+        			.addComponent(jButtonConfirmaAlteraFuncionario)
+        			.addContainerGap())
         );
+        jPanel6.setLayout(jPanel6Layout);
 
-        jTabbedPanePaciente.addTab("Altera Hora Marcada", jPanel6);
+        jTabbedPanePaciente.addTab("Cancelar Agendamento", jPanel6);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -317,38 +255,10 @@ public class Paciente extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>                        
 
-    private void jButtonConfirmaAlteraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                 
-        // TODO add your handling code here:
-    }                                                                
-
-    private void jButtonCancelarAlteraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                 
-        Fisioterapia TelaFisioterapia = new Fisioterapia();
-        TelaFisioterapia.setVisible(true);
-        this.dispose();
-    }                                                                
-
-    private void jTextFieldCrfFuncionario4ActionPerformed(java.awt.event.ActionEvent evt) {                                                          
-        // TODO add your handling code here:
-    }                                                         
-
-    private void jButtonConfirmaFuncionario1ActionPerformed(java.awt.event.ActionEvent evt) {                                                            
-        // TODO add your handling code here:
-    }                                                           
-
-    private void jButtonCancelarFuncionario1ActionPerformed(java.awt.event.ActionEvent evt) {                                                            
-        Fisioterapia TelaFisioterapia = new Fisioterapia();
-        TelaFisioterapia.setVisible(true);
-        this.dispose();
-    }                                                           
-
-    private void jTextFieldDataAgendarPacienteActionPerformed(java.awt.event.ActionEvent evt) {                                                              
-        // TODO add your handling code here:
-    }                                                             
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jButtonConfirmaAlteraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {   
+    	
         
-        new Picker().chamaCalendario(jTextFieldDataAgendarPaciente);
-    }                                        
+    }                                                                
 
     private void jButtonAgendaConfirmaPacienteActionPerformed(java.awt.event.ActionEvent evt) {                                                              
         //String stringDoComboBox;
@@ -359,12 +269,6 @@ public class Paciente extends javax.swing.JFrame {
         
         
     
-    }                                                             
-
-    private void jButtonAgendaCancelarPacienteActionPerformed(java.awt.event.ActionEvent evt) {                                                              
-        Fisioterapia TelaFisioterapia = new Fisioterapia();
-        TelaFisioterapia.setVisible(true);
-        this.dispose();
     }                                                             
 
     private void jComboBoxAgendaEspecialidadeFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {                                                                        
@@ -408,28 +312,15 @@ public class Paciente extends javax.swing.JFrame {
 //            }
 //        });
     }
-
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButtonAgendaCancelarPaciente;
     private javax.swing.JButton jButtonAgendaConfirmaPaciente;
-    private javax.swing.JButton jButtonCancelarAlteraFuncionario;
-    private javax.swing.JButton jButtonCancelarFuncionario1;
     private javax.swing.JButton jButtonConfirmaAlteraFuncionario;
-    private javax.swing.JButton jButtonConfirmaFuncionario1;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBoxCancelaHoraPaciente;
     private javax.swing.JComboBox jComboBoxAgendaEspecialidadeFuncionario;
-    private javax.swing.JLabel jLabeCrfFuncionario3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabelTelaInicialPaciente;
     private javax.swing.JLabel jLabelEspecialidadeFuncionario1;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTabbedPane jTabbedPanePaciente;
-    private javax.swing.JTextField jTextFieldCrfFuncionario4;
-    private javax.swing.JTextField jTextFieldDataAgendarPaciente;
-    // End of variables declaration                   
-
 }

@@ -91,26 +91,33 @@ public class Agendar extends javax.swing.JFrame {
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
 		layout.setHorizontalGroup(
-				layout.createParallelGroup(Alignment.LEADING)
-						.addGroup(layout.createSequentialGroup().addContainerGap()
-								.addComponent(jButtonConfirmaAlteraFuncionario)
-								.addPreferredGap(ComponentPlacement.RELATED, 328, Short.MAX_VALUE)
-								.addComponent(jButtonCancelarAlteraFuncionario).addGap(20))
-						.addGroup(layout.createSequentialGroup().addGap(161).addComponent(jLabelSelecioneOPeriodo)
-								.addContainerGap(183, Short.MAX_VALUE))
-						.addGroup(layout.createSequentialGroup().addGap(83)
-								.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, 323, GroupLayout.PREFERRED_SIZE)
-								.addContainerGap(92, Short.MAX_VALUE)));
-		layout.setVerticalGroup(layout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(layout.createSequentialGroup().addContainerGap(156, Short.MAX_VALUE)
-						.addComponent(jLabelSelecioneOPeriodo).addGap(18)
-						.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-								GroupLayout.PREFERRED_SIZE)
-						.addGap(58)
-						.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-								.addComponent(jButtonConfirmaAlteraFuncionario)
-								.addComponent(jButtonCancelarAlteraFuncionario))
-						.addGap(19)));
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(jButtonConfirmaAlteraFuncionario)
+					.addPreferredGap(ComponentPlacement.RELATED, 328, Short.MAX_VALUE)
+					.addComponent(jButtonCancelarAlteraFuncionario)
+					.addGap(20))
+				.addGroup(layout.createSequentialGroup()
+					.addGap(83)
+					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+						.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, 323, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabelSelecioneOPeriodo))
+					.addContainerGap(104, Short.MAX_VALUE))
+		);
+		layout.setVerticalGroup(
+			layout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(layout.createSequentialGroup()
+					.addGap(63)
+					.addComponent(jLabelSelecioneOPeriodo)
+					.addGap(18)
+					.addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jButtonConfirmaAlteraFuncionario)
+						.addComponent(jButtonCancelarAlteraFuncionario))
+					.addGap(19))
+		);
 		getContentPane().setLayout(layout);
 
 		pack();
