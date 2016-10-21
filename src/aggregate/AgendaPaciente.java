@@ -11,6 +11,7 @@ public class AgendaPaciente {
 	private AgendaPaciente(Agenda agenda, Paciente paciente) {
 		this.setAgenda(agenda);
 		this.setPaciente(paciente);
+		//teste
 	}
 
 	public static AgendaPaciente nova(Agenda agenda, Paciente paciente) {
