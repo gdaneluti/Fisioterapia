@@ -1,6 +1,12 @@
 package service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Repository.AgendaPacienteRepositorio;
 import Repository.PacienteRepositorio;
+import aggregate.AgendaPaciente;
+import entity.Agenda;
 import entity.Paciente;
 import factory.FabricaPaciente;
 
@@ -37,4 +43,16 @@ public class ServicoPaciente {
 	public void setPacienteRepositorio(PacienteRepositorio pacienteRepositorio) {
 		this.pacienteRepositorio = pacienteRepositorio;
 	}
+
+	public List<Agenda> retornaAgendasPaciente(String cpf) {
+		List<Agenda> retorno = new ArrayList<Agenda>();
+
+		for (AgendaPaciente ap : AgendaPacienteRepositorio.getAgendas()) {
+			if (ap.getPaciente().getCpf().equals(cpf)) {
+				retorno.add(ap.getAgenda());
+			}
+		}
+		return null;
+	}
+
 }
