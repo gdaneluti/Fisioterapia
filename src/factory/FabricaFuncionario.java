@@ -1,7 +1,6 @@
 package factory;
 
 import entity.Funcionario;
-import enumerate.Especialidade;
 
 public class FabricaFuncionario {
 
