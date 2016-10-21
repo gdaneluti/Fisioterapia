@@ -3,14 +3,9 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 
-import Repository.AgendaPacienteRepositorio;
 import Repository.FuncionarioRepository;
-import aggregate.AgendaPaciente;
-import entity.Agenda;
 import entity.Data;
 import entity.Funcionario;
-import entity.Paciente;
-import entity.Periodo;
 import service.ServicoDeFuncionario;
 import service.ServicoFachada;
 import view.Fisioterapia;
