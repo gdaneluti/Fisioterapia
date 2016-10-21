@@ -52,7 +52,7 @@ public class ServicoPaciente {
 				retorno.add(ap.getAgenda());
 			}
 		}
-		return null;
+		return retorno;
 	}
 
 }

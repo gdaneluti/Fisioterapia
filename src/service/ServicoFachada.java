@@ -77,7 +77,11 @@ public class ServicoFachada {
 	public Funcionario solicitarFuncionarioByCrf(String crf) {
 		return servicoFuncionario.procurarFuncionarioByCrf(crf);
 	}
-
+ 
+	public List<Agenda> solicitarAgendaPacienteByCpf (String cpf) {
+		return servicoPaciente.retornaAgendasPaciente(cpf);
+	}
+	
 	public void solicitarDeleteAgendaPaciente(AgendaPaciente agendaPaciente) {
 		servicoAgendaPaciente.removerAgendaPaciente(agendaPaciente);
 	}

@@ -40,7 +40,7 @@ public class TesteDebug {
 	 * public static void BuscarHorariosLivres() { ServicoFaixada servicoFaixada
 	 * = new ServicoFaixada();
 	 * 
-	 * // Simula a cria��o de um paciente
+	 * // Simula a criacao de um paciente
 	 * servicoFaixada.cadastrarPaciente("GABRIEL", "402.502.698-80"); // Simula
 	 * o cadastro de um funcionario
 	 * servicoFaixada.cadastrarFuncionario("GUSTAVO", "ACUPUNTURA", "1234");
@@ -74,7 +74,7 @@ public class TesteDebug {
 
 		servicoFachada.cadastrarPaciente("Paciente1", "Paciente1");
 		servicoFachada.cadastrarPaciente("Paciente2", "Paciente2");
-		servicoFachada.cadastrarFuncionario("Funcionário Teste", "ACUPUNTURA", "4567890");
+		servicoFachada.cadastrarFuncionario("Funcionario Teste", "ACUPUNTURA", "4567890");
 
 		Data inicio = Data.nova(8, 10);
 		Data fim = Data.nova(9, 10);
@@ -85,7 +85,7 @@ public class TesteDebug {
 
 		servicoFachada.solicitarDeleteAgendaPaciente(servicoFachada.getAgendaPaciente().get(0));
 
-		// Funcionario funcionario2 = Funcionario.novo("Funcionário Teste",
+		// Funcionario funcionario2 = Funcionario.novo("Funcionario Teste",
 		// "ACUPUNTURA", "4567890");
 		// Paciente paciente2 = Paciente.novoPaciente("Paciente Teste", "567");
 		// Paciente paciente3 = Paciente.novoPaciente("Paciente Test2", "123");
@@ -136,7 +136,7 @@ public class TesteDebug {
 		for (Funcionario itemFuncionario : MEGAREPOSITORIO.getFuncionarios()) {
 			System.out.println(itemFuncionario.getNome() + " " + itemFuncionario.getCrf());
 		}
-		System.out.println("acima está o db");
+		System.out.println("acima esta o db");
 		List<Funcionario> lista32531 = new ArrayList<Funcionario>();
 		Funcionario funcionario = Funcionario.novo("fhfhjg", "ACUPUNTURA", "4567");
 		lista32531 = MEGAREPOSITORIO.select(funcionario);
