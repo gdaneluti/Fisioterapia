@@ -12,7 +12,7 @@ import entity.Funcionario;
 import entity.Paciente;
 import entity.Periodo;
 import service.ServicoDeFuncionario;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 import view.Fisioterapia;
 
 public class TesteDebug {
@@ -75,7 +75,7 @@ public class TesteDebug {
 	 */
 	public static void testUpdateAgendaPaciente() {
 
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 
 		servicoFachada.cadastrarPaciente("Paciente1", "Paciente1");
 		servicoFachada.cadastrarPaciente("Paciente2", "Paciente2");
@@ -89,10 +89,8 @@ public class TesteDebug {
 				servicoFachada.getPacientes().get(0));
 
 		servicoFachada.solicitarDeleteAgendaPaciente(servicoFachada.getAgendaPaciente().get(0));
-		
-		//Comentário
-		
-		// Funcionario funcionario2 = Funcionario.novo("Funcion�rio Teste",
+
+		// Funcionario funcionario2 = Funcionario.novo("Funcionário Teste",
 		// "ACUPUNTURA", "4567890");
 		// Paciente paciente2 = Paciente.novoPaciente("Paciente Teste", "567");
 		// Paciente paciente3 = Paciente.novoPaciente("Paciente Test2", "123");

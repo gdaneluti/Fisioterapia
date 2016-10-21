@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import service.ServicoFaixada;
+import service.ServicoFachada;
 
 public class TesteGetEspecialidades {
 
@@ -15,7 +15,7 @@ public class TesteGetEspecialidades {
 	
 	@Test
 	public void testGetEspecialidades(){
-		ServicoFaixada servicoFaixada = new ServicoFaixada();
+		ServicoFachada servicoFaixada = new ServicoFachada();
 		assertEquals(4, servicoFaixada.getEspecialidades().size());
 	}
 

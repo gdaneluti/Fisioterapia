@@ -7,7 +7,7 @@ import org.junit.Test;
 import Repository.FuncionarioRepository;
 import enumerate.Especialidade;
 import service.ServicoDeFuncionario;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 
 public class TesteFuncionario {
 
@@ -25,7 +25,7 @@ public class TesteFuncionario {
 	
 	@Test
 	public void testeCadastrarFuncionario(){
-		ServicoFaixada servicoFaixada = new ServicoFaixada();
+		ServicoFachada servicoFaixada = new ServicoFachada();
 		assertEquals(0, FuncionarioRepository.getFuncionarios().size());
 		assertTrue(servicoFaixada.cadastrarFuncionario("Matheus", "ACUPUNTURA", "123456"));
 		assertEquals(1, FuncionarioRepository.getFuncionarios().size());

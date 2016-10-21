@@ -7,7 +7,7 @@ import org.junit.Test;
 import Repository.PacienteRepositorio;
 import entity.Paciente;
 import factory.FabricaPaciente;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 import service.ServicoPaciente;
 
 public class TestePacienteSimples {
@@ -29,7 +29,7 @@ public class TestePacienteSimples {
 
 	@Test
 	public void testCadastrarPaciente() {
-		ServicoFaixada servicoFaixada = new ServicoFaixada();
+		ServicoFachada servicoFaixada = new ServicoFachada();
 		assertEquals(0, PacienteRepositorio.getPacientes().size());
 		assertTrue(servicoFaixada.cadastrarPaciente("Gustavo", "402.502.698-80"));
 		assertEquals(1, PacienteRepositorio.getPacientes().size());

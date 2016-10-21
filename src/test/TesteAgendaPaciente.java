@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import entity.Funcionario;
 import enumerate.Especialidade;
-import service.ServicoFaixada;
+import service.ServicoFachada;
 
 public class TesteAgendaPaciente {
 
@@ -15,7 +15,7 @@ public class TesteAgendaPaciente {
 	
 	@Test
 	public void BuscarHorariosLivres(){
-		ServicoFaixada servicoFachada = new ServicoFaixada();
+		ServicoFachada servicoFachada = new ServicoFachada();
 		Funcionario funcionario = Funcionario.novo("Gustavo", "ACUPUNTURA", "1234");
 		servicoFachada.IniciarAgendamento(funcionario);
 	}
