@@ -36,7 +36,7 @@ public class PacienteRepositorio implements RepositorioGenerico<Paciente>{
 	public Boolean insert(Paciente paciente) {
 		pacientes.add(paciente);
 		return true;
-		//TODO: Vericar se o paciente já existe no repositorio
+		//TODO: Vericar se o paciente jï¿½ existe no repositorio
 	}
 
 	@Override
