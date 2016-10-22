@@ -66,7 +66,7 @@ public class Agendar extends javax.swing.JFrame {
 		
 		entity.Funcionario funcionario = servicoFachada.solicitarFuncionarioByCrf(arrayEspecialidadeEscolhida[2]);
 		for (Periodo itemPeriodo : servicoFachada.IniciarAgendamento(funcionario).getPeriodos()) {
-			jComboBox1.addItem(itemPeriodo.getInicio().getHora() + "h �s " + itemPeriodo.getFim().getHora() + "h");
+			jComboBox1.addItem(itemPeriodo.getInicio().getHora() + "h as " + itemPeriodo.getFim().getHora() + "h");
 		}
 
 		// jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[]
@@ -124,8 +124,8 @@ public class Agendar extends javax.swing.JFrame {
 	}// </editor-fold>
 
 	private void jButtonCancelarAlteraFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {
-		Paciente TelaPaciente = new Paciente("");
-		TelaPaciente.setVisible(true);
+//		Paciente TelaPaciente = new Paciente("");
+//		TelaPaciente.setVisible(true);
 		this.dispose();
 	}
 
@@ -135,7 +135,7 @@ public class Agendar extends javax.swing.JFrame {
 		
 		String stringPeriodo = jComboBox1.getSelectedItem().toString();
 		String periodo = stringPeriodo.replaceAll("h", " ");
-		periodo = periodo.replaceAll(" �s ", "");
+		periodo = periodo.replaceAll(" as ", "");
 		String[] arrayPeriodo = periodo.split(" ");
 
 		Data dt1 = Data.nova(Integer.parseInt(arrayPeriodo[0]), 0);

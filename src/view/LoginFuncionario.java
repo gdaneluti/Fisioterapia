@@ -22,13 +22,14 @@ import javax.swing.GroupLayout;
  * @author Wendler
  */
 public class LoginFuncionario extends javax.swing.JFrame {
-	String loginCpfFuncionario = "5678";
-
 	/**
 	 * Creates new form LoginFuncionario
 	 */
+	
+	public String crf = "";
 	public LoginFuncionario() {
 		initComponents();
+		System.out.println(crf);
 	}
 
 	/**
@@ -253,32 +254,28 @@ public class LoginFuncionario extends javax.swing.JFrame {
 		if (servicoFachada.cadastrarFuncionario(jTextFieldLoginNomeFuncionario.getText(),
 				jComboBoxLoginEspecialidadeFuncionario1.getSelectedItem().toString(),
 				jTextFieldLoginCrfFuncionario1.getText())) {
-			JOptionPane.showMessageDialog(null, "Funcion�rio Cadastrado com Sucesso!");
+			//JOptionPane.showMessageDialog(null, "Funcion�rio Cadastrado com Sucesso!");
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "Funcion�rio j� cadastrado!");
+			//JOptionPane.showMessageDialog(null, "Funcion�rio j� cadastrado!");
 		}
 
 	}
 
 	private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton4ActionPerformed
-
-		if (jTextFieldLoginCrfFuncionario2.getText().equals(loginCpfFuncionario)) {
-			Funcionario TelaFuncionario = new Funcionario();
+		ServicoFachada servicoFachada = new ServicoFachada();
+		crf = jTextFieldLoginCrfFuncionario2.getText();
+		System.out.println(crf);
+		if (servicoFachada.solicitarLoginFuncionario(crf)) {
+			Funcionario TelaFuncionario = new Funcionario(crf);
 			TelaFuncionario.setVisible(true);
 			this.dispose();
 		}
-
 		else {
 			System.out.println(jTextFieldLoginCrfFuncionario2.getText());
 			System.out.println("Senha Invalida");
 		}
 	}// GEN-LAST:event_jToggleButton4ActionPerformed
-
-	public String getloginCpfFuncionario() {
-		loginCpfFuncionario = "Wendler Zacariotto";
-		return loginCpfFuncionario;
-	}
 
 	public void setjToggleButton4(JToggleButton jToggleButton4) {
 		this.jToggleButton4 = jToggleButton4;

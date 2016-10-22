@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Repository.FuncionarioRepository;
+import aggregate.AgendaPaciente;
 import entity.Data;
 import entity.Funcionario;
+import entity.Periodo;
 import service.ServicoDeFuncionario;
 import service.ServicoFachada;
 import view.Fisioterapia;
@@ -20,6 +22,12 @@ public class TesteDebug {
 		@SuppressWarnings("unused")
 		Fisioterapia fisioterapia = new Fisioterapia();
 		fisioterapia.main(args);
+		
+		
+//		ServicoFachada servicoFachada = new ServicoFachada();
+//		List<AgendaPaciente> agendas = servicoFachada.getAgendaPaciente();
+		//Periodo periodo = agendas.get(0).getAgenda().getPeriodos().get(0);
+		//System.out.println(periodo.getInicio().getHora().toString());
 		
 		//testUpdateAgendaPaciente();
 
