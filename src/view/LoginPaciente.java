@@ -205,7 +205,7 @@ public class LoginPaciente extends javax.swing.JFrame {
 			JOptionPane.showMessageDialog(null, "Paciente Cadastrado com Sucesso!");
 		}
 		else{
-			JOptionPane.showMessageDialog(null, "Este CPF j� foi cadastrado!");
+			JOptionPane.showMessageDialog(null, "Este CPF ja foi cadastrado!");
 		}
 	}
 
@@ -221,13 +221,6 @@ public class LoginPaciente extends javax.swing.JFrame {
 
 	private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton4ActionPerformed
 		ServicoFachada servicoFachada = new ServicoFachada();
-<<<<<<< .mine
-		
-||||||| .r16
-		servicoFachada.cadastrarPaciente("Gustavo", "1234");
-=======
->>>>>>> .r22
-
 		if (servicoFachada.solicitarLoginPaciente(jTextFieldLoginCpfPaciente.getText()) != null) {
 			Paciente TelaPaciente = new Paciente(jTextFieldLoginCpfPaciente.getText());
 			TelaPaciente.setVisible(true);

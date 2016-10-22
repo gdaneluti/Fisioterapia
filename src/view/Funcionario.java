@@ -120,9 +120,14 @@ public class Funcionario extends javax.swing.JFrame {
 		for (AgendaPaciente agendaPaciente : agendas) {
 			for (Periodo periodo : agendaPaciente.getAgenda().getPeriodos()) {
 				if (agendaPaciente.getAgenda().getFuncionario().getCrf().equals(getCrfFuncionario())) {
-					comboBox1.addItem(periodo.getInicio().getHora() + "h às " + periodo.getFim().getHora() + "h");
-					System.out.println(agendaPaciente.getAgenda().getFuncionario().getCrf());
-					System.out.println(periodo.getInicio().getHora() + "h às " + periodo.getFim().getHora() + "h");
+					comboBox1.addItem(agendaPaciente.getPaciente().getNome().toUpperCase() + " - "
+							+ agendaPaciente.getAgenda().getFuncionario().getEspecialidade() + " - "
+							+ periodo.getInicio().getHora() + "h às " + periodo.getFim().getHora() + "h");
+					//labelVerifiqueAgenda.setText("Verifique sua Agenda " + agendaPaciente.getAgenda().getFuncionario().getNome());
+					
+					// System.out.println(agendaPaciente.getAgenda().getFuncionario().getCrf());
+					// System.out.println(periodo.getInicio().getHora() + "h às
+					// " + periodo.getFim().getHora() + "h");
 				}
 			}
 		}
@@ -530,21 +535,20 @@ public class Funcionario extends javax.swing.JFrame {
 	}// GEN-LAST:event_jTextFieldCrfFuncionario4ActionPerformed
 
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-		//System.out.println(getCrfFuncionario());
-		
-		List<AgendaPaciente> agendas = servicoFachada.getAgendaPaciente();
-		//Periodo periodo = agendas.get(0).getAgenda().getPeriodos().get(0);
-		//System.out.println(periodo.getInicio().getHora().toString());
-		String teste = getCrfFuncionario();
-		for (AgendaPaciente agendaPaciente : agendas) {
-			for (Periodo periodo : agendaPaciente.getAgenda().getPeriodos()) {
-				if (agendaPaciente.getAgenda().getFuncionario().getCrf().equals(teste)) {
-					
-					System.out.println("INICIO"+periodo.getInicio().getHora() + "h às " + periodo.getFim().getHora() + "h");
-					System.out.println(agendaPaciente.getAgenda().getFuncionario().getCrf());
-				}
-			}
-		}
+		// System.out.println(getCrfFuncionario());
+
+		// List<AgendaPaciente> agendas = servicoFachada.getAgendaPaciente();
+		// for (AgendaPaciente agendaPaciente : agendas) {
+		// for (Periodo periodo : agendaPaciente.getAgenda().getPeriodos()) {
+		// if
+		// (agendaPaciente.getAgenda().getFuncionario().getCrf().equals(getCrfFuncionario()))
+		// {
+		// System.out.println("INICIO"+periodo.getInicio().getHora() + "h às " +
+		// periodo.getFim().getHora() + "h");
+		// System.out.println(agendaPaciente.getAgenda().getFuncionario().getCrf());
+		// }
+		// }
+		// }
 	}
 
 	private void jButtonDeletarCancelarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButtonDeletarCancelarFuncionarioActionPerformed

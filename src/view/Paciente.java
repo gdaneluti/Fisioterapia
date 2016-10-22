@@ -42,7 +42,7 @@ public class Paciente extends javax.swing.JFrame {
         return nomePaciente;
     }
 
-    public void setNomePaciente(String nomeMedico) {
+    public void setNomePaciente(String nomePaciente) {
         this.nomePaciente = nomePaciente;
     }
     
@@ -264,7 +264,7 @@ public class Paciente extends javax.swing.JFrame {
         //String stringDoComboBox;
         //stringDoComboBox = String.valueOf(jComboBoxAgendaEspecialidadeFuncionario.getSelectedItem());
         //Agendar telaAgendar = new Agendar(jTextFieldDataAgendarPaciente.getText().toString(), jComboBoxAgendaEspecialidadeFuncionario.getSelectedItem().toString());
-    	Agendar telaAgendar = new Agendar(this.jComboBoxAgendaEspecialidadeFuncionario.getSelectedItem().toString());
+    	Agendar telaAgendar = new Agendar(this.jComboBoxAgendaEspecialidadeFuncionario.getSelectedItem().toString(), this.cpfPaciente);
     	telaAgendar.setVisible(true);
         
         

@@ -13,7 +13,7 @@ public class EspecificacaoValidaFuncionarioExisteNoRepositorio {
 	public Boolean VerificarFuncionarioExistenteNoRepositorioPorCrf(Funcionario funcionario,
 			List<Funcionario> funcionarios) {
 		for (Funcionario funcionario_ : funcionarios) {
-			if (funcionario.getCrf() == funcionario_.getCrf()) {
+			if (funcionario.getCrf().equals(funcionario_.getCrf())) {
 				return true;
 			} 
 		}

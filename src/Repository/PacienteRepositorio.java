@@ -3,12 +3,14 @@ package Repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import Specification.EspecificacaoValidaFuncionarioExisteNoRepositorio;
+import Specification.EspecificacaoValidaPacienteExisteNoRepositorio;
 import entity.Paciente;
 
-public class PacienteRepositorio implements RepositorioGenerico<Paciente>{
+public class PacienteRepositorio implements RepositorioGenerico<Paciente> {
 
 	private static List<Paciente> pacientes = new ArrayList<Paciente>();
-	
+
 	public static List<Paciente> getPacientes() {
 		return pacientes;
 	}
@@ -22,7 +24,7 @@ public class PacienteRepositorio implements RepositorioGenerico<Paciente>{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	public Paciente selectByCpf(String cpf) {
 		for (Paciente itemPaciente : pacientes) {
 			if (cpf.equals(itemPaciente.getCpf())) {
@@ -34,9 +36,14 @@ public class PacienteRepositorio implements RepositorioGenerico<Paciente>{
 
 	@Override
 	public Boolean insert(Paciente paciente) {
-		pacientes.add(paciente);
-		return true;
-		//TODO: Vericar se o paciente j� existe no repositorio
+		EspecificacaoValidaPacienteExisteNoRepositorio validaPacienteExisteNoRepositorio = new EspecificacaoValidaPacienteExisteNoRepositorio();
+		if (!validaPacienteExisteNoRepositorio.VerificarPacienteExistenteNoRepositorioPorCrf(paciente,
+				pacientes)) {
+			pacientes.add(paciente);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override

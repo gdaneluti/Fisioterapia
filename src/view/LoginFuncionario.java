@@ -59,9 +59,8 @@ public class LoginFuncionario extends javax.swing.JFrame {
 		jToggleButton5 = new javax.swing.JToggleButton();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-		setAlwaysOnTop(true);
 		setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
+		
 		jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
 		// jTextFieldLoginNomeFuncionario.setText("Nome");
@@ -250,14 +249,16 @@ public class LoginFuncionario extends javax.swing.JFrame {
 	}// GEN-LAST:event_jToggleButton3ActionPerformed
 
 	private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton1ActionPerformed
+		
 		ServicoFachada servicoFachada = new ServicoFachada();
 		if (servicoFachada.cadastrarFuncionario(jTextFieldLoginNomeFuncionario.getText(),
 				jComboBoxLoginEspecialidadeFuncionario1.getSelectedItem().toString(),
 				jTextFieldLoginCrfFuncionario1.getText())) {
-			//JOptionPane.showMessageDialog(null, "Funcion�rio Cadastrado com Sucesso!");
+			JOptionPane.showMessageDialog(null, "Funcionario Cadastrado com Sucesso!");
+			
 		}
 		else{
-			//JOptionPane.showMessageDialog(null, "Funcion�rio j� cadastrado!");
+			JOptionPane.showMessageDialog(null, "Funcionario ja cadastrado!");
 		}
 
 	}

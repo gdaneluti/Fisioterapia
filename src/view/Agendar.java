@@ -20,12 +20,21 @@ import service.ServicoFachada;
 public class Agendar extends javax.swing.JFrame {
 
 	private String especialidadeEscolhida;
+	private String cpf;
 
 	// public final String dataAgendada;
 	//
-	public Agendar(String especialidadeEscolhida) {
-		this.setEspecialidadeEscolhida(especialidadeEscolhida);
+	public String getCpf() {
+		return cpf;
+	}
 
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public Agendar(String especialidadeEscolhida, String cpf) {
+		this.setEspecialidadeEscolhida(especialidadeEscolhida);
+		this.setCpf(cpf);
 		// jLabelTerapiaSelecionada.setText("Terapia Selecionada:
 		// "+especialidadeEscolhida);
 
@@ -144,7 +153,7 @@ public class Agendar extends javax.swing.JFrame {
 		servicoFachada.AgregarAgendaPaciente(
 				servicoFachada.Agendar(dt1, dt2,
 						servicoFachada.solicitarFuncionarioByCrf(arrayEspecialidadeEscolhida[2])),
-				servicoFachada.solicitarLoginPaciente("CPF"));
+				servicoFachada.solicitarLoginPaciente(cpf));
 	}
 
 	/**
